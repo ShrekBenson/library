@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="scripts/app.js" defer></script>
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Welcome to the library</title>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="topbar__logo">
+        <img src="src/logo.svg" alt="Logo">
+        <h1>LookforBook</h1>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" aria-label="Log in">Log in</a></li>
+          <li class="nav__item"><a href="#" aria-label="Sign up">Sing up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>    
+    <dialog id="newBook" class="dialog_menu">
+      <h2>New book</h2>
+      <form method="dialog">
+        <p>
+          <label>
+            <input type="text" id="bookTitle" placeholder="Title" required>
+          </label>
+          <label>
+            <input type="text" id="bookAuthor" placeholder="Author" required>
+          </label>
+          <label>
+            <input type="tel" id="bookPages" placeholder="Pages" required>
+          </label>
+        </p>
+        <p>
+          <button value="" formnovalidate>Cancel</button>
+          <button value="" id="addBook">Add +</button>
+        </p>
+      </form>
+    </dialog>
+    <div class="library">
+      <ul class="library__books">
+        <li class="library__book">
+          <h2 title="" id="title">Title</h2>
+          <label for="author">Author</label>
+          <input type="text" id="author" readonly>
+          <label for="pages">Total pages</label>
+          <input type="text" id="pages" readonly>
+          <label>
+            Readed
+            <input type="checkbox" value="no" id="readed">
+          </label>
+          <button type="button" id="delete">Delete</button>
+        </li>                
+      </ul>
+    </div>
+    <div class="menu">
+      <button class="add_book" type="button">
+        <span><img src="src/add_book.svg" alt="Add book">+</span>
+        Add book
+      </button>
+      <div class="information">
+        <h2>Library information</h2>
+        <ul>
+          <li>
+            <label for="booksQuantity">Books quantity</label>
+            <input type="number" id="booksQuantity" readonly>
+          </li>
+          <li>
+            <label for="booksReaded">Books readed</label>
+            <input type="number" id="booksReaded" readonly>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
